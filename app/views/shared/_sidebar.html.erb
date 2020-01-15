@@ -1,6 +1,9 @@
 <div class="sidenav">
   <%= link_to "Listes", products_path %>
   <a href="#">Recherche</a>
-  <%= link_to "Ajout", new_product_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modalNewProduct'} %>
+  <%= link_to "Ajout", new_product_path %>
+  <% if user_signed_in? && current_user.admin %>
+    <%= link_to "Admin", :root %>
+  <% end %>
   <a href="#">About</a>
 </div>

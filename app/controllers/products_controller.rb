@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, :only => [:home]
 
   def new
     @product = Product.new
@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @products = Product.all.page(params[:page])
   end
   
   def show

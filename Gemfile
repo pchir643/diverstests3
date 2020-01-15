@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'popper_js', '~> 1.14.5'
+gem 'kaminari'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

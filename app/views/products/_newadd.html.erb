@@ -1,5 +1,5 @@
 <div class="modalNewProduct">
-  <%= simple_form_for @product, remote: true do |f| %>
+  <%= simple_form_for [@product], method: :post do |f| %>
     <%= f.input :name %>
     <%= f.association :category %>
     <%= f.submit "Enr", class: "btn btn-success" %>

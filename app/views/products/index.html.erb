@@ -1,23 +1,6 @@
 <div class="container">
-
-  <!-- Modal -->
-  <div class="modal fade" id="modalNewProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ajout article</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <div aria-hidden="true">&times;</div>
-          </button>
-        </div>
-        <div class="modal-body">
-          <%= render 'products/newadd'%>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <h1>Produits</h1>
+  <%= paginate @products %>
   <div class="row">
     <table>
     <tr>
@@ -39,5 +22,6 @@
     </tr>
     <% end %>
     </table>
+    <%= paginate @products %>
   </div>
 </div>
